@@ -1,0 +1,55 @@
+POST http://localhost:5000/user/register
+Content-Type: application/json
+
+{
+    "username":"tharun",
+    "email":"tharun@gmail.com",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:5000/user/login 
+Content-Type: application/json
+
+{
+    "username":"tharun",
+    "password":"123456"
+}
+
+###
+POST http://localhost:5000/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYXJ1biIsImlhdCI6MTcyNDUwMjMwNX0.xebpfOvLWOAfJFyXkFGBLklFUmaajdsWNHdx830K3Ws
+
+{
+    "title":"React.js Upcomming Updates",
+    "author":"Tharun",
+    "topic":"Regarding Updates in latest version",
+    "image":"img1.jpg",
+    "content":"There are many updates comming in the latest version of React"
+}
+
+###
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYXJ1biIsImlhdCI6MTcyNDUwMjMwNX0.xebpfOvLWOAfJFyXkFGBLklFUmaajdsWNHdx830K3Ws
+
+###
+GET http://localhost:5000/posts/66c8a35db9b85cdc8c38c3d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYXJ1biIsImlhdCI6MTcyNDQyMzE4OH0.tlSF0RnsSRdmojw8txXBUgiDvI3byOc09xzM8qnNfcU
+
+###
+PUT http://localhost:5000/posts/66c8a35db9b85cdc8c38c3d4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYXJ1biIsImlhdCI6MTcyNDQyMzE4OH0.tlSF0RnsSRdmojw8txXBUgiDvI3byOc09xzM8qnNfcU
+
+{
+    "title":"MongoDB"
+}
+
+###
+DELETE http://localhost:5000/posts/66c8a35db9b85cdc8c38c3d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYXJ1biIsImlhdCI6MTcyNDQyMzE4OH0.tlSF0RnsSRdmojw8txXBUgiDvI3byOc09xzM8qnNfcU
+
+###
+GET http://localhost:5000/user/getUsers
